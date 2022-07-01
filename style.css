@@ -1,0 +1,42 @@
+.red {
+    width: 100vw;
+    height: 100vh;
+    background: url(/picture.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 25px rgba(84, 169, 237, 0.8);
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 30px;
+    color: aliceblue;
+    font-family: monospace;
+    position: relative;
+    margin: 0;
+}
+
+.bubble {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(
+        circle at center,
+        rgba(105, 171, 223, 0.2) 0%,
+        rgba(84, 169, 237, 0.8) 100%
+    );
+    box-shadow: 0 0 25px rgba(105, 171, 223, 0.5);
+    border-radius: 50px;
+    position: absolute;
+    animation: 5s 1 grow;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0.5, 0.5);
+        transform: (0.5, 0.5);
+    }
+    100% {
+        transform: scale(1, 1);
+        transform: (1, 1);
+    }
+}
