@@ -1,7 +1,7 @@
 .red {
     width: 100vw;
     height: 100vh;
-    background: url(../picture.jpg);
+    background: url(./picture.jpg);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
