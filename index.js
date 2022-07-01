@@ -1,5 +1,18 @@
 let block = document.querySelector('.red');
 let score = document.querySelector('.score');
+let audio = document.querySelector('.audio');
+let volume = document.querySelector('.volume');
+let mute = document.querySelector('.mute');
+volume.addEventListener('click', () => {
+    mute.style.display = 'inline-block';
+    volume.style.display = 'none';
+    audio.muted = true;
+});
+mute.addEventListener('click', () => {
+    mute.style.display = ' none';
+    volume.style.display = 'inline-block';
+    audio.muted = false;
+});
 
 let cuont = 0;
 score.innerHTML = `Score: ${cuont}`;
@@ -19,12 +32,13 @@ function createBubble() {
         bubble.style.height = size;
 
         bubble.addEventListener('click', () => {
+            audio.play();
             bubble.style.display = 'none';
             cuont += 1;
             score.innerHTML = `Score: ${cuont}`;
         });
 
-        if (cuont === 1000) {
+        if (cuont > 100) {
             clearInterval(bubbles);
         }
     }, 500);

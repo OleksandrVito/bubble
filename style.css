@@ -1,6 +1,6 @@
 body {
-  padding: 0;
-  margin: 0;  
+    padding: 0;
+    margin: 0;
 }
 
 .red {
@@ -10,7 +10,7 @@ body {
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-/*     box-shadow: 0 0 25px rgba(84, 169, 237, 0.8); */
+    /* box-shadow: 0 0 25px rgba(84, 169, 237, 0.8); */
     font-size: 30px;
     font-weight: 800;
     text-align: center;
@@ -44,4 +44,29 @@ body {
         transform: scale(1, 1);
         transform: (1, 1);
     }
+}
+
+button {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border: none;
+    background: radial-gradient(
+        circle at center,
+        rgba(105, 171, 223, 0.2) 0%,
+        rgba(84, 169, 237, 0.8) 100%
+    );
+    box-shadow: 0 0 20px rgba(105, 171, 223, 0.5),
+        0 0 5px rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+}
+
+.mute {
+    display: none;
+}
+
+button:active {
+    border: 1px solid rgba(105, 171, 223, 0.2);
 }
