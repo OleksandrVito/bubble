@@ -69,10 +69,6 @@ button {
     display: none;
 }
 
-button:active {
-    /* border: 1px solid rgba(105, 171, 223, 0.2); */
-}
-
 .score {
     font-size: 25px;
     margin: 0 auto;
@@ -105,4 +101,10 @@ button:active {
 }
 .mute img {
     width: 29px;
+}
+
+@media (min-width: 360px) {
+    .title {
+        font-size: 60px;
+    }
 }
