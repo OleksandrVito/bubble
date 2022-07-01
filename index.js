@@ -15,14 +15,15 @@ mute.addEventListener('click', () => {
 });
 
 let cuont = 0;
-score.innerHTML = `Score: ${cuont}`;
+score.innerHTML = '';
+// score.style.fontSize = '15px';
 function createBubble() {
     let bubbles = setInterval(() => {
         let bubble = document.createElement('div');
         bubble.classList.add('bubble');
         block.appendChild(bubble);
 
-        let size = `${Math.floor(Math.random() * (100 - 30) + 30)}px`;
+        let size = `${Math.floor(Math.random() * (70 - 30) + 30)}px`;
 
         let topPosition = `${Math.floor(Math.random() * (85 - 10) + 10)}%`;
         let leftPosition = `${Math.floor(Math.random() * (85 - 10) + 10)}%`;
@@ -35,7 +36,8 @@ function createBubble() {
             audio.play();
             bubble.style.display = 'none';
             cuont += 1;
-            score.innerHTML = `Score: ${cuont}`;
+            score.innerHTML = cuont;
+            // score.style.fontSize = '50px';
         });
 
         if (cuont > 100) {
