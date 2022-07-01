@@ -6,6 +6,7 @@ body {
 .red {
     width: 100vw;
     height: 100vh;
+    max-height: -webkit-fill-available;
     background: url(./picture.jpg);
     background-size: cover;
     background-position: bottom;
